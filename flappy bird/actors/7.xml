@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id313416" PGFVersion="0.25" GSCVersion="1.25.5977">
+  <attributes>
+    <text id="name">Pipe Spawner</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">120</real>
+      <real id="height">120</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image" />
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id991605" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">stil playing 2</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id290444" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id587178</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="boolean">
+            <attributes>
+              <index id="RHS">0</index>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id975742" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">0</index>
+            <real id="interval">4</real>
+            <boolean id="runToCompletion">false</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id952384" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id769414</text>
+                <text id="RHS">
+                  <expression>
+                    <string xml:space="preserve">random(300, 450)</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id981763" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn top</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id300333</text>
+                <angle id="direction">0</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">600</real>
+                <real id="y">
+                  <expression>
+                    <reference keypath="game.attributes.id769414" />
+                  </expression>
+                </real>
+                <index id="positionSpace">1</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id747573" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn invisble pipe</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id998192</text>
+                <angle id="direction">0</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">600</real>
+                <real id="y">
+                  <expression>
+                    <reference keypath="game.attributes.id769414" />
+                    <string xml:space="preserve">-200</string>
+                  </expression>
+                </real>
+                <index id="positionSpace">1</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id265227" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn btm</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id279573</text>
+                <angle id="direction">0</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">600</real>
+                <real id="y">
+                  <expression>
+                    <reference keypath="game.attributes.id769414" />
+                    <string xml:space="preserve">-400</string>
+                  </expression>
+                </real>
+                <index id="positionSpace">1</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <point id="centerOfMass">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+        <boolean id="pin">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+        <boolean id="canSleep">true</boolean>
+        <boolean id="betterColisions">false</boolean>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.25" GSCVersion="1.25.5977">
+  <sounds />
+  <images>
+    <image name="2">
+      <file name="2.png" size="299" />
+    </image>
+    <image name="Back Ground">
+      <file name="Back Ground.png" size="8505" />
+    </image>
+    <image name="bottom">
+      <file name="bottom.png" size="6922" />
+    </image>
+    <image name="floor">
+      <file name="floor.png" size="733" />
+    </image>
+    <image name="top">
+      <file name="top.png" size="6720" />
+    </image>
+    <image name="yellow bird 1">
+      <file name="yellow bird 1.png" size="303" />
+    </image>
+    <image name="yellow bird 3">
+      <file name="yellow bird 3.png" size="300" />
+    </image>
+  </images>
+  <fonts />
+  <behaviors />
+</assets>
